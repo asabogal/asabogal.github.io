@@ -34,4 +34,5 @@ And that was it! My main problem was solved. The rest of the time was spent twea
 I’m really happy with the results because I achieved exactly what I had in mind. Also, I learned a ton! What I take away the most from the project is how to work without the need of a test driven development tool, and instead use the terminal and console to troubleshoot. Tools like `binding.pry` are life savers and your best friend!
 
 You can check my gem here: 
-https://github.com/asabogal/top-credit-cards-CLI-gem.git
+
+[https://github.com/asabogal/top-credit-cards-CLI-gem.git](http://)
