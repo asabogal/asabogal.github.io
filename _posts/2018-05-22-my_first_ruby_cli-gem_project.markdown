@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "My first RUBY CLI-GEM Project"
-date:       2018-05-22 19:06:57 +0000
+date:       2018-05-22 15:06:58 -0400
 permalink:  my_first_ruby_cli-gem_project
 ---
 
