@@ -1,10 +1,10 @@
 # Site settings
-title: 2 months in Flatiron School
+title: My journey as a Softer Development Student
 header-img: img/home-bg.png
 email: asabogal.git@gmail.com
 copyright_name: asabogal
 description: > # this means to ignore newlines until "baseurl:"
-  Advice for new students
+  With advice for new students
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  asabogal
