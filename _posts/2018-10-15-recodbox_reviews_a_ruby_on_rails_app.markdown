@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Recodbox Reviews a Ruby on Rails App"
-date:       2018-10-15 17:21:34 +0000
+title:      "Recordbox Reviews a Ruby on Rails App"
+date:       2018-10-15 13:21:35 -0400
 permalink:  recodbox_reviews_a_ruby_on_rails_app
 ---
 
