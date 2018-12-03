@@ -116,9 +116,11 @@ This made it easier and more practical to render data and manage errors.
 
 After this was setup and the rails app was fully functional, the next step was to use the JSON serialization objects to send responses from the JavaScript AJAX calls. Requesting the JSON objects and processing the information is very straight forward. On some occasions I used `fetch()`, in other I used jQuery `$.post()` or `$.get()`. Only so I could practice and learn both ways. No particular preference. One AJAX method I discovered was the jQuery `.load()`. This makes it very easy to extract html from elements in other pages outside the current one in one line of code:
 
+
 ```
 $('.current-matches').load(`/leagues/${this.dataset.id}/matches/current .matches-table`)
 ```
+
 
 The hardest part about rendering AJAX JS was the actual rendering of the JSON objects into the html pages. I was working mainly with html forms with several rows and headers, so at times it was challenging to populate or append the html in them. I didn't wanted to use Handlebars or other templating resources, instead I used ES6 template literals to do this, which was a bit tedious sometimes.
 
