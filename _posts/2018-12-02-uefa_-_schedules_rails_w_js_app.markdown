@@ -129,7 +129,8 @@ The hardest part about rendering AJAX JS was the actual rendering of the JSON ob
 Overall I really enjoyed working on this project. I was forced to master my developer googling skills and therefore learned plenty!
 
 GitHub Repo:
-https://github.com/asabogal/UEFA-schedules
+[https://github.com/asabogal/UEFA-schedules](http://)
+
 
 
 
