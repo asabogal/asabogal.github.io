@@ -118,7 +118,7 @@ After this was setup and the rails app was fully functional, the next step was t
 
 
 
-`$('.current-matches').load(`/leagues/${this.dataset.id}/matches/current .matches-table`)`
+```$('.current-matches').load('/leagues/${this.dataset.id}/matches/current .matches-table')```
 
 
 
