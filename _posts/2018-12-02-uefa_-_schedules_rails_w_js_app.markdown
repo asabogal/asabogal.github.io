@@ -87,7 +87,7 @@ end
 This leagues service object corresponds to the leagues controller. Each controller in the app has a corresponding service object. Once I made sure the connections were set on the service object , the next step on the data flow was to to call the service object in the controllers to process the data. This is an example of on of the leagues controller actions calling on the service object:
 
 ```
-  def current_matches
+ def current_matches
     @league = LeagueService.find_league(params[:id])
       if params[:matchday]
         @matchday = params[:matchday].to_i
@@ -110,7 +110,9 @@ This leagues service object corresponds to the leagues controller. Each controll
             end
       end 
   end
-	```
+```
+ 
+
 	
 This made it easier and more practical to render data and manage errors. 
 
