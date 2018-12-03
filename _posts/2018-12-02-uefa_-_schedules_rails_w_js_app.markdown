@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "UEFA - Schedules (Rails w JS App)"
-date:       2018-12-03 01:12:16 +0000
+date:       2018-12-02 20:12:17 -0500
 permalink:  uefa_-_schedules_rails_w_js_app
 ---
 
@@ -10,8 +10,7 @@ For this project I decided to build a new Rails app instead of using my previous
 
 Since my new app was not going to be a typical CRUD app, and therefore I was not going to use a database and instead use API data, the first challenge was to develop a system to request information and process it. I also had to render this information as JSON objects so that the JavaScript front-end (or other apps) could fetch this information from my back-end. So I started by building the routes and endpoints for what I was panning to render. Most of them we custom routes but still following RESTful pricinciples:
 
-
-``` Rails.application.routes.draw do
+```
   root 'welcome#home'
 
   resources :leagues, only: [:index, :show]
@@ -25,12 +24,12 @@ Since my new app was not going to be a typical CRUD app, and therefore I was not
   get '/today', to: 'todays#today'
 
   resources :reviews, only: [:index, :create]
-end ```
+end
+```
 
 Next I built the controllers. Initially I placed all the logic in them but quickly realized that controllers shouldn’t be responsible for requesting external data, processing the data and rendering the data. So to follow the single responsibility principle, I created service objects to communicate with the third party API, process the responses, and then feed those to the controller. I approached the design of the service object to function in a similar way as Active Record, that is have the ability for the controller to find data by id or parameters through the service objects. The three main data “objects” the application is concerned with are, Leagues, Matches, and Teams: 
 
-```class LeagueService
-
+```
   def self.find_league(id)
     url = "https://api.football-data.org/v2/competitions/#{id}"
     resp = Faraday.get url do |req|
@@ -81,8 +80,8 @@ Next I built the controllers. Initially I placed all the logic in them but quick
       @response
     end
 
-end```
-
+end
+```
 
 
 This leagues service object corresponds to the leagues controller. Each controller in the app has a corresponding service object. Once I made sure the connections were set on the service object , the next step on the data flow was to to call the service object in the controllers to process the data. This is an example of on of the leagues controller actions calling on the service object:
@@ -110,19 +109,23 @@ This leagues service object corresponds to the leagues controller. Each controll
             format.json { render json: {status: "error", code: 429, message: "Too many requests. Please try again in one minute"} }
             end
       end 
-  end```
+  end
+	```
 	
 This made it easier and more practical to render data and manage errors. 
 
 After this was setup and the rails app was fully functional, the next step was to use the JSON serialization objects to send responses from the JavaScript AJAX calls. Requesting the JSON objects and processing the information is very straight forward. On some occasions I used `fetch()`, in other I used jQuery `$.post()` or `$.get()`. Only so I could practice and learn both ways. No particular preference. One AJAX method I discovered was the jQuery `.load()`. This makes it very easy to extract html from elements in other pages outside the current one in one line of code:
 
-```$('.current-matches').load(`/leagues/${this.dataset.id}/matches/current .matches-table`)```
+```
+$('.current-matches').load(`/leagues/${this.dataset.id}/matches/current .matches-table`)
+```
 
 The hardest part about rendering AJAX JS was the actual rendering of the JSON objects into the html pages. I was working mainly with html forms with several rows and headers, so at times it was challenging to populate or append the html in them. I didn't wanted to use Handlebars or other templating resources, instead I used ES6 template literals to do this, which was a bit tedious sometimes.
 
 Overall I really enjoyed working on this project. I was forced to master my developer googling skills and therefore learned plenty!
 
-
+GitHub Repo:
+https://github.com/asabogal/UEFA-schedules
 
 
 
