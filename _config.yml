@@ -1,15 +1,14 @@
 # Site settings
-title: My journey as a Software Development Student
+author: Alejandro Sabogal
+title: How I get it...
 header-img: img/home-bg.png
 email: asabogal.git@gmail.com
-copyright_name: asabogal
+copyright_name: Alejandro Sabogal
 description: > # this means to ignore newlines until "baseurl:"
-  With advice for new students
+  Basic Rails and React/JS Principles
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  asabogal
-learn_profile: asabogal
-email_username: asabogal.git@gmail.com
 
 # Build settings
 markdown: kramdown
