@@ -50,7 +50,7 @@ Let’s take a look at the question and the code again to see the execution cont
 
 ```
 ///////////////GLOBAL ENVIRONMENT//////////////
-///////global execution context///////
+
 
 const a = () => {
 ///////function a execution context/////// 
@@ -110,7 +110,7 @@ Let’s take a look again at our code in question and stack our execution contex
 
 ```
 ///////////////GLOBAL ENVIRONMENT//////////////
-///////global execution context///////
+
 
 const a = () => {
 ///////function a execution context/////// 
