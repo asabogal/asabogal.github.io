@@ -212,7 +212,7 @@ So at this point the next execution in the stack is for function c. The engine l
 ///GLOBAL EXECUTION///
 ```
 
-What remains to be executed in function a is the console.log(“a”). So the engines logs “a” and function a is fully executed. It gets removed from the stack and the engine is left with the global execution only. Since there is nothing else to execute in the global environment, the global execution context gets removed from the stack, and all our code is fully executed and complete.
+What remains to be executed in function a is the console.log(“a”). So the engine logs “a” and function a is fully executed. It gets removed from the stack and the engine is left with the global execution only. Since there is nothing else to execute in the global environment, the global execution context gets removed from the stack and all our code is fully executed and complete.
 
 Our answer then should be:
 
@@ -222,5 +222,5 @@ b
 c
 a
 
-I think this is a very important concept to grasp in JavaScript. It helped me understand the basics of how JavaScript code runs and works. It helped me understand Scope, variable assignment and declaration on ES6, and other important concepts. Hopefully is given you a similar understanding that you can use to become a better JavaScript developer.
+I think this is a very important concept to grasp in JavaScript. It helped me understand the basics of how JavaScript code runs and works. It helped me understand Scope, variable assignment and declaration on ES6, and other important concepts. Hopefully it's given you a similar understanding that you can use to become a better JavaScript developer.
 
