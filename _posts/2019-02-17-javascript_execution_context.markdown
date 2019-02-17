@@ -53,28 +53,28 @@ Let’s take a look at the question and the code again to see the execution cont
 
 
 const a = () => {
-///////function a execution context/////// 
-b()              
+  ///////function a execution context/////// 
+  b()              
   console.log("a") 
-};
-
-const b = () => {
- ///////function b execution context/////// 
-	console.log("b")
-  c()         
-};
-
-const c = () => {
- ///////function c execution context///////
-  console.log("c")  
-};
-
-///////global execution context///////
-c() 
-console.log("d") 
-a()
-
-//////////////GLOBAL ENVIRONMENT///////////////
+  };
+  
+  const b = () => {
+   ///////function b execution context///////
+   console.log("b")
+   c()         
+  };
+  
+  const c = () => {
+   ///////function c execution context///////
+   console.log("c")  
+  };
+  
+  ///////global execution context///////
+  c() 
+  console.log("d") 
+  a()
+  
+  //////////////GLOBAL ENVIRONMENT///////////////
 ```
 
 Ok, so we’ve determined our execution contexts, but how do we determine the order of our console.logs and answer the question? To do so we need to understand the execution stack.
@@ -113,28 +113,28 @@ Let’s take a look again at our code in question and stack our execution contex
 
 
 const a = () => {
-///////function a execution context/////// 
-	b()              
+  ///////function a execution context/////// 
+  b()              
   console.log("a") 
-};
-
-const b = () => {
- ///////function b execution context/////// 
-	console.log("b")
-  c()         
-};
-
-const c = () => {
- ///////function c execution context///////
-  console.log("c")  
-};
-
-///////global execution context///////
-c() 
-console.log("d") 
-a()
-
-//////////////GLOBAL ENVIRONMENT///////////////
+  };
+  
+  const b = () => {
+   ///////function b execution context///////
+   console.log("b")
+   c()         
+  };
+  
+  const c = () => {
+   ///////function c execution context///////
+   console.log("c")  
+  };
+  
+  ///////global execution context///////
+  c() 
+  console.log("d") 
+  a()
+  
+  //////////////GLOBAL ENVIRONMENT///////////////
 ```
 
 
