@@ -54,7 +54,7 @@ Let’s take a look at the question and the code again to see the execution cont
 
 const a = () => {
 ///////function a execution context/////// 
-	b()              
+b()              
   console.log("a") 
 };
 
@@ -222,5 +222,5 @@ b
 c
 a
 
-I think this is a very important concept to grasp in JavaScript. It helped me understand the basics of how JavaScript code runs and works. Its helped me understand Scope, variable assignment and declaration on ES6, and other important concepts. Hopefully is given you a similar understanding that you can use to become a better JavaScript developer.
+I think this is a very important concept to grasp in JavaScript. It helped me understand the basics of how JavaScript code runs and works. It helped me understand Scope, variable assignment and declaration on ES6, and other important concepts. Hopefully is given you a similar understanding that you can use to become a better JavaScript developer.
 
