@@ -85,12 +85,12 @@ To do so we need to understand the execution stack.
 When the JavaScript engine parses our code in its first pass, it reads code from top to bottom in the global environment, creates the global execution context and stores it at the bottom of what is known as the execution stack:
 
 ```
-—EXECUTION STACK—
-/////////////////////
-/////////////////////
-/////////////////////
-/////////////////////
-/////////////////////
+    —EXECUTION STACK—
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
 ///GLOBAL EXECUTION///
 ```
 
@@ -98,12 +98,12 @@ When the JavaScript engine parses our code in its first pass, it reads code from
 If there is a function call, the engine creates and execution context for that function and stacks it on top of the execution stack. If it finds another function, it creates another execution context for that function and stacks it on top of the execution stack:
 
 ```
-—EXECUTION STACK—
-/////////////////////
-/////////////////////
-/////////////////////
-///FUNC 2 EXECTUTION//
-///FUNC 1 EXECTUTION//
+    —EXECUTION STACK—
+///////////////////////
+///////////////////////
+///////////////////////
+///FUNC 2 EXECUTION///
+///FUNC 1 EXECUTION///
 ///GLOBAL EXECUTION///
 ```
 
@@ -145,11 +145,11 @@ a() ///////global execution context///////
 Our first tack looks like this:
 
 ```
-—EXECUTION STACK—
-/////////////////////
-/////////////////////
-/////////////////////
-///FUNC C EXECTUTION//
+    —EXECUTION STACK—
+///////////////////////
+///////////////////////
+///////////////////////
+///FUNC C EXECUTION///
 ///GLOBAL EXECUTION///
 ```
 
@@ -157,48 +157,48 @@ Our first tack looks like this:
 The engine finds a call to function c, stacks it on top of the stack and executes function c because there are no other functions to call, we only console log “c”. Once the function is called and executed, it gets removed from the stack, and so we are back in the global execution context:
 
 ```
-—EXECUTION STACK—
-/////////////////////
-/////////////////////
-/////////////////////
-/////////////////////
-/////////////////////
+    —EXECUTION STACK—
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
 ///GLOBAL EXECUTION///
 ```
 
 The engine now finds console.log(“d”). At this point there is nothing to stack because we are still in the global execution context, so no new execution context is created. After the engine logs “d”, it finds a call to function a. At this point an execution context is created for function a and it’s put on top of the stack. Our stack now looks like this:
 
 ```
-—EXECUTION STACK—
-/////////////////////
-/////////////////////
-/////////////////////
-/////////////////////
-///FUNC A EXECTUTION//
+    —EXECUTION STACK—
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///FUNC A EXECUTION///
 ///GLOBAL EXECUTION///
 ```
 
 Now the engine attempts to execute function a but it finds a call to function b inside that context, so it won’t execute function a and instead creates a new execution context for function b and stacks it on top of the  execution stack like so:
 
 ```
-—EXECUTION STACK—
-/////////////////////
-/////////////////////
-/////////////////////
-///FUNC B EXECTUTION//
-///FUNC A EXECTUTION//
+    —EXECUTION STACK—
+///////////////////////
+///////////////////////
+///////////////////////
+///FUNC B EXECUTION///
+///FUNC A EXECUTION///
 ///GLOBAL EXECUTION///
 ```
 
 Now inside function b’s execution context, the engine logs “b” and it encounters a call to function c which needs to stack at the top fo the execution stack. Because this is the last line of code in function b, function b is fully executed and removed from the stack by then. So our execution stack now looks like this:
 
 ```
-—EXECUTION STACK—
-/////////////////////
-/////////////////////
-/////////////////////
-///FUNC C EXECTUTION//
-///FUNC A EXECTUTION//
+    —EXECUTION STACK—
+///////////////////////
+///////////////////////
+///////////////////////
+///FUNC C EXECUTION///
+///FUNC A EXECUTION///
 ///GLOBAL EXECUTION///
 ```
 
@@ -207,12 +207,12 @@ Notice that function a is still in the execution stack because it hasn’t been 
 So at this point the next execution in the stack is for function c. The engine logs “c” and function c gets fully executed and removed from the stack, leaving function a at the top of the stack and next in line to be executed:
 
 ```
-—EXECUTION STACK—
-/////////////////////
-/////////////////////
-/////////////////////
-/////////////////////
-///FUNC A EXECTUTION//
+    —EXECUTION STACK—
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///FUNC A EXECUTION///
 ///GLOBAL EXECUTION///
 ```
 
