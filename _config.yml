@@ -2,10 +2,10 @@
 author: Alejandro Sabogal
 title: How I get it...
 header-img: img/home-bg.png
-email: asabogal.git@gmail.com
+email: asabogal.dev@gmail.com
 copyright_name: Alejandro Sabogal
 description: > # this means to ignore newlines until "baseurl:"
-  Basic Rails and React/JS Principles
+  Principles on Ruby, Rails, JavaScript, React.js 
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  asabogal
