@@ -90,9 +90,9 @@ Rails’ ActiveStorage allows you to attach files to ActiveRecord models. If you
 
 Instead of storing uploaded files directly on Heroku, it is recommended to use a cloud file storage service such as AWS or Google Cloud. In this article, we’ll use Google Cloud Storage as it’s very straight forward and it’s free to use for the first year.
 
-Got to https://cloud.google.com and sign in with your Google account or create one. You’ll be taken to the Google Cloud Platform where you will create a new project. Name the project as your application’s name:
+Go to https://cloud.google.com and sign in with your Google account or create one. You’ll be taken to the Google Cloud Platform where you will create a new project. Name the project as your application’s name:
 
-[URL=https://s708.photobucket.com/user/moxaphotos/media/Screen%20Shot%202019-04-30%20at%2021.04.18.png.html][IMG]https://i708.photobucket.com/albums/ww83/moxaphotos/Screen%20Shot%202019-04-30%20at%2021.04.18.png[/IMG][/URL]
+![https://i708.photobucket.com/albums/ww83/moxaphotos/Screen%20Shot%202019-04-30%20at%2021.04.18.png](http://)
  
 Next, open the Google Cloud Platform menu on the left side. Under “Storage”, hover over “Storage” and click on “Browser”. Click on the “Create Bucket” button to create a new “bucket” for your project:
 
