@@ -217,9 +217,9 @@ This manual setup is ok while on development, but for production, we need to mak
   "private": true,
   "proxy": "http://localhost:3001",
   "dependencies": { 
-    .
-		.
-		.
+ .
+ .
+ .
 ```		
 
 
