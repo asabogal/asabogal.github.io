@@ -91,7 +91,7 @@ Instead of storing uploaded files directly on Heroku, it is recommended to use a
 
 Got to https://cloud.google.com and sign in with your Google account or create one. You’ll be taken to the Google Cloud Platform where you will create a new project. Name the project as your application’s name:
 
-
+![]file:///Users/ale/Desktop/ScreenShots/Screen%20Shot%202019-04-30%20at%2021.04.18.png
  
 Next, open the Google Cloud Platform menu on the left side. Under “Storage”, hover over “Storage” and click on “Browser”. Click on the “Create Bucket” button to create a new “bucket” for your project:
 
@@ -368,7 +368,7 @@ To precompile assets, change the following lines in the Rails < config/environme
 
 If you are new to deployment, I hope this guide has saved you a few hours of research and have successfully deployed your app. If you are experienced, hopefully, you can use this guide as a refresher and maybe keep it as a comprehensive reference for the future. I sure will.
 
-References:
+**References:**
 
 https://devcenter.heroku.com/articles/getting-started-with-rails5
 
