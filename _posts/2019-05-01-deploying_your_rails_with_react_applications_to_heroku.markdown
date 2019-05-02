@@ -92,7 +92,7 @@ Instead of storing uploaded files directly on Heroku, it is recommended to use a
 
 Got to https://cloud.google.com and sign in with your Google account or create one. You’ll be taken to the Google Cloud Platform where you will create a new project. Name the project as your application’s name:
 
-![](https://i708.photobucket.com/albums/ww83/moxaphotos/Screen%20Shot%202019-04-30%20at%2021.04.18.pnghttp://)
+[URL=https://s708.photobucket.com/user/moxaphotos/media/Screen%20Shot%202019-04-30%20at%2021.04.18.png.html][IMG]https://i708.photobucket.com/albums/ww83/moxaphotos/Screen%20Shot%202019-04-30%20at%2021.04.18.png[/IMG][/URL]
  
 Next, open the Google Cloud Platform menu on the left side. Under “Storage”, hover over “Storage” and click on “Browser”. Click on the “Create Bucket” button to create a new “bucket” for your project:
 
