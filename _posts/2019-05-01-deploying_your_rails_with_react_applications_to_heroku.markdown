@@ -216,8 +216,12 @@ This manual setup is ok while on development, but for production, we need to mak
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001",
-  "dependencies": { .....
-	```	
+  "dependencies": { 
+    .
+		.
+		.
+```		
+
 
 Next, we need to make changes to the client’s fetch requests. 
 
