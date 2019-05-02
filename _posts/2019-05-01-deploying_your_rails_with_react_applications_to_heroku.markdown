@@ -36,9 +36,10 @@ By default, Rails uses SQLite3 for its database, however, SQLite is not intended
 
 To move from sqlite3 to postgres, open your Gemfile and remove or comment out the sqlite3 gem and add the postgres gem:
 
-`# gem ‘sqlite3’
-gem ‘pg’
-`
+`# gem ‘sqlite3’`
+
+`gem ‘pg’`
+
 
 Alternatively, you can group your gems on their respective environments if you want to preserve your current database on the development environment:
 
@@ -95,7 +96,7 @@ Got to https://cloud.google.com and sign in with your Google account or create o
  
 Next, open the Google Cloud Platform menu on the left side. Under “Storage”, hover over “Storage” and click on “Browser”. Click on the “Create Bucket” button to create a new “bucket” for your project:
 
- 
+ ![](https://www.studytonight.com/data-structures/images/basic-insertion-sort.pnghttp://)
 
 A bucket is where your data is held on the Google Cloud. The name must be globally unique across Cloud Storage. For the settings, select Regional storage class, choose your location, and create:
 
