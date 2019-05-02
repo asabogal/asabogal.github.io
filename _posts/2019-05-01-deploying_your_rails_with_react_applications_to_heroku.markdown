@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Deploying your Rails with React Applications to Heroku"
-date:       2019-05-02 01:13:39 +0000
+date:       2019-05-01 21:13:40 -0400
 permalink:  deploying_your_rails_with_react_applications_to_heroku
 ---
 
@@ -129,7 +129,7 @@ google:
      service: GCS
      project: your-app-name
      credentials: <%= ENV['GOOGLE_APPLICATION_CREDENTIALS'] %>
-bucket: your-app-name
+     bucket: your-app-name
 ```
 
 *Note: Make sure you add your corresponding project and bucket names instead of “your-app-name”.*
@@ -216,10 +216,7 @@ This manual setup is ok while on development, but for production, we need to mak
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001",
-  "dependencies": {
-    .
-    .    
-    .
+  "dependencies": { .....
 	```	
 
 Next, we need to make changes to the client’s fetch requests. 
