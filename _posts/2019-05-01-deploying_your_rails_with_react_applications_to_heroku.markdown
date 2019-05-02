@@ -219,6 +219,8 @@ This manual setup is ok while on development, but for production, we need to mak
   "dependencies": { 
 	
 	. . .
+	
+	}
  
 ```		
 
@@ -343,7 +345,7 @@ Commit all your changes and push them to Heroku:
 
 *Note: the < git push > command takes in two arguments, a remote name and the local branch name to be pushed, i.e ` git push <remotename> <branchname`. You should push the branch name where all these changes took place. If you followed my suggestion to create a new deployment branch before making these changes, you will need to deploy that branch instead of master above.*
 
-*When you push your app to Heroku, Heroku will run the scripts we set in the Rails `package.json` file to build the app. This process will take a minute or two. You can see the `build` and `deploy` scripts running in the background while this process takes place. *
+*When you push your app to Heroku, Heroku will run the scripts we set in the Rails `package.json` file to build the app. This process will take a minute or two. You can see the `build` and `deploy` scripts running in the background while this process takes place.*
 
 And finally!... since this is a brand new app hosted in Heroku, there won’t be a database set yet. You must create it, migrate it, and seed it (if you have a seed file). In your terminal:
 
